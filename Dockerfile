@@ -7,7 +7,7 @@ RUN apk add --no-cache git mysql-client \
     libpng-dev \
     libjpeg-turbo-dev \
     freetype-dev \
-    && docker-php-ext-install pdo_mysql \
+    && docker-php-ext-install pdo_mysql zip \
     && docker-php-ext-configure gd --with-gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ --with-png-dir=/usr/include/ \
     && docker-php-ext-install gd
 
